@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>com.customer.LoginServlet</servlet-class> <!-- Ensure correct class name -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>feedbackInsert</servlet-name>
+        <servlet-class>com.customer.FeedbackInsertServlet</servlet-class> <!-- Ensure correct class name -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>feedbackInsert</servlet-name>
+        <url-pattern>/feedbackInsert</url-pattern> <!-- Added leading '/' -->
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FeedbackDeleteServlet</servlet-name>
+        <servlet-class>com.customer.FeedbackDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FeedbackDeleteServlet</servlet-name>
+        <url-pattern>/feedbackDelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InsertInquiryServlet</servlet-name>
+        <servlet-class>com.customer.InsertInquiryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertInquiryServlet</servlet-name>
+        <url-pattern>/InsertInquiryServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
